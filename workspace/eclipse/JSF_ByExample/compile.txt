@@ -1,0 +1,2 @@
+javac -cp F:\01\NetBeans\glassfish-4.0\glassfish\modules\javax.servlet-api.jar SimpleServlet.java
+jar -cf Simpleservlet.jar . (execute this command from the SimpleServlet folder) 

@@ -1,0 +1,15 @@
+package com;
+
+public class BookClass {
+	
+	private String name;
+	
+	public void setname (String n) {
+		Name = n;
+	}
+	
+	public String getname () {
+		return Namena;
+	}
+
+}

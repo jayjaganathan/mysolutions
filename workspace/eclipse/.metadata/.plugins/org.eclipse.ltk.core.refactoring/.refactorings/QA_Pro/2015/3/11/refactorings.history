@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;QA_Pro/src/com/quapro/register/RegisterMembe.java&apos; to &apos;RegisterMember.java&apos;" description="Rename resource &apos;RegisterMembe.java&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/com/quapro/register/RegisterMembe.java" name="RegisterMember.java" stamp="1426121647505" updateReferences="true"/>
+</session>

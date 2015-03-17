@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_webapplication1" default="compile.module.webapplication1">
+  <dirname property="module.webapplication1.basedir" file="${ant.file.module_webapplication1}"/>
+  
+  <property name="module.jdk.home.webapplication1" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.webapplication1" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.webapplication1" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.webapplication1" value="-encoding UTF-8 -source 1.6 ${compiler.args}"/>
+  
+  <property name="webapplication1.output.dir" value="${module.webapplication1.basedir}/out/production/webApplication1"/>
+  <property name="webapplication1.testoutput.dir" value="${module.webapplication1.basedir}/out/test/webApplication1"/>
+  
+  <path id="webapplication1.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="webapplication1.module.production.classpath">
+    <path refid="${module.jdk.classpath.webapplication1}"/>
+    <path refid="library.javax.servlet:servlet-api:2.3.classpath"/>
+  </path>
+  
+  <path id="webapplication1.runtime.production.module.classpath">
+    <pathelement location="${webapplication1.output.dir}"/>
+    <path refid="library.javax.servlet:servlet-api:2.3.classpath"/>
+  </path>
+  
+  <path id="webapplication1.module.classpath">
+    <path refid="${module.jdk.classpath.webapplication1}"/>
+    <pathelement location="${webapplication1.output.dir}"/>
+    <path refid="library.javax.servlet:servlet-api:2.3.classpath"/>
+  </path>
+  
+  <path id="webapplication1.runtime.module.classpath">
+    <pathelement location="${webapplication1.testoutput.dir}"/>
+    <pathelement location="${webapplication1.output.dir}"/>
+    <path refid="library.javax.servlet:servlet-api:2.3.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.webapplication1">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.webapplication1">
+    <patternset refid="excluded.from.module.webapplication1"/>
+  </patternset>
+  
+  <path id="webapplication1.module.sourcepath">
+    <dirset dir="${module.webapplication1.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.webapplication1" depends="compile.module.webapplication1.production,compile.module.webapplication1.tests" description="Compile module webApplication1"/>
+  
+  <target name="compile.module.webapplication1.production" depends="register.custom.compilers" description="Compile module webApplication1; production classes">
+    <mkdir dir="${webapplication1.output.dir}"/>
+    <javac2 destdir="${webapplication1.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.webapplication1}/javac">
+      <compilerarg line="${compiler.args.webapplication1}"/>
+      <bootclasspath refid="webapplication1.module.bootclasspath"/>
+      <classpath refid="webapplication1.module.production.classpath"/>
+      <src refid="webapplication1.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.webapplication1"/>
+    </javac2>
+    
+    <copy todir="${webapplication1.output.dir}">
+      <fileset dir="${module.webapplication1.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.webapplication1.tests" depends="register.custom.compilers,compile.module.webapplication1.production" description="compile module webApplication1; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.webapplication1" description="cleanup module">
+    <delete dir="${webapplication1.output.dir}"/>
+    <delete dir="${webapplication1.testoutput.dir}"/>
+  </target>
+</project>
