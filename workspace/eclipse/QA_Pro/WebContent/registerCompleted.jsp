@@ -12,8 +12,10 @@
 	<br/>
 	<br/>
 	<jsp:useBean id="bookBean" class="com.BookClass" scope="session">
-		<jsp:setProperty property="name" name="bookBean"/>
+		
 	</jsp:useBean>
+	<jsp:setProperty property="name" name="bookBean"/>
+	
 	Your name is <%= request.getParameter("name") %>	<br/>
 	You name again is 
 	<jsp:getProperty name="bookBean" property="name" />

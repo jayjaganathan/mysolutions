@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="false" key="J2EE_EXPORT_OVERWRITE"/>
+	<item value="false" key="J2EE_EXPORT_SOURCE"/>
+	<item value="wrs-ear" key="LASTEARNAME_"/>
+	<list key="J2EE_EXPORT_JST_EJB">
+		<item value="c:\temp\wrs-ejbs.jar"/>
+	</list>
+	<list key="J2EE_IMPORT_EAR">
+		<item value="C:\Dev\workspace\netbeans\cart\dist\cart.ear"/>
+	</list>
+	<list key="MRU_RUNTIME_STORE">
+		<item value="Oracle WebLogic Server 11gR1 (10.3.6)"/>
+		<item value="Apache Tomcat v8.0"/>
+	</list>
+	<list key="J2EE_EXPORT_JST_WEB">
+		<item value="c:\temp\ch06_ex2_survey.war"/>
+		<item value="c:\temp\ch05_ex1_email.war"/>
+		<item value="c:\temp\ch05_ex1_emai;.war"/>
+		<item value="c:\temp\QA_Pro.war"/>
+	</list>
+</section>

@@ -1,0 +1,57 @@
+package murach.tags;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+import javax.servlet.jsp.JspException;
+import javax.servlet.jsp.tagext.BodyTagSupport;
+
+import murach.business.Product;
+
+public class ProductTag extends BodyTagSupport {
+	
+	ArrayList<Product> products;
+
+	/* (non-Javadoc)
+	 * @see javax.servlet.jsp.tagext.BodyTagSupport#doAfterBody()
+	 */
+	@Override
+	public int doAfterBody() throws JspException {
+		// TODO Auto-generated method stub
+		return super.doAfterBody();
+	}
+
+	/* (non-Javadoc)
+	 * @see javax.servlet.jsp.tagext.BodyTagSupport#doInitBody()
+	 */
+	@Override
+	public void doInitBody() throws JspException {
+		
+		Iterator<Product> iterator = products.iterator();
+		if(iterator.hasNext())
+		{
+			Product product = (Product)iterator.next();
+			
+			
+		}
+		
+	}
+
+	/* (non-Javadoc)
+	 * @see javax.servlet.jsp.tagext.BodyTagSupport#doStartTag()
+	 */
+	@Override
+	public int doStartTag() throws JspException {
+		
+		products = (ArrayList<Product>) pageContext.getAttribute("products");
+		
+		if(products.size() <= 0) {
+            return SKIP_BODY;
+        } else {
+            return EVAL_BODY_BUFFERED;
+        }
+	}
+
+	
+}

@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <modules>
+  <module moduleId="org.eclipse.jst.jee.server:HelloWorld1" serverId="Oracle WebLogic Server 11gR1 (10.3.6) at localhost [domain1]"/>
+  <module moduleId="org.eclipse.jst.jee.server:ch09_ex1_download" serverId="Oracle WebLogic Server 11gR1 (10.3.6) at localhost [domain1]"/>
+  <module moduleId="org.eclipse.jst.jee.server:ch07_ex1_download" serverId="Oracle WebLogic Server 11gR1 (10.3.6) at localhost [domain1]"/>
   <module moduleId="org.eclipse.jst.j2ee.server:HelloWorld" serverId="Tomcat v8.0 Server at localhost"/>
-  <module moduleId="org.eclipse.jst.jee.server:QA_Pro"/>
+  <module moduleId="org.eclipse.jst.jee.server:ch09_ex2_cart" serverId="Oracle WebLogic Server 11gR1 (10.3.6) at localhost [domain1]"/>
+  <module moduleId="org.eclipse.jst.jee.server:ch06_ex2_survey" serverId="Oracle WebLogic Server 11gR1 (10.3.6) at localhost [domain1]"/>
+  <module moduleId="org.eclipse.jst.jee.server:ch07_ex3_cart" serverId="Oracle WebLogic Server 11gR1 (10.3.6) at localhost [domain1]"/>
+  <module moduleId="org.eclipse.jst.jee.server:ch05_ex1_email" serverId="Oracle WebLogic Server 11gR1 (10.3.6) at localhost [domain1]"/>
+  <module moduleId="org.eclipse.jst.jee.server:wrs-ear" serverId="Oracle WebLogic Server 11gR1 (10.3.6) at localhost [domain1]"/>
+  <module moduleId="org.eclipse.jst.jee.server:HelloWorld" serverId="Oracle WebLogic Server 11gR1 (10.3.6) at localhost [domain1]"/>
+  <module moduleId="org.eclipse.jst.jee.server:wrs-web" serverId="Oracle WebLogic Server 11gR1 (10.3.6) at localhost [domain1]"/>
+  <module moduleId="org.eclipse.jst.jee.server:QA_Pro2" serverId="Oracle WebLogic Server 11gR1 (10.3.6) at localhost [domain1]"/>
+  <module moduleId="org.eclipse.jst.jee.server:ch06_ex1_email" serverId="Oracle WebLogic Server 11gR1 (10.3.6) at localhost [domain1]"/>
+  <module moduleId="org.eclipse.jst.jee.server:ch08_ex1_email" serverId="Oracle WebLogic Server 11gR1 (10.3.6) at localhost [domain1]"/>
+  <module moduleId="org.eclipse.jst.jee.server:ch07_ex2_download" serverId="Oracle WebLogic Server 11gR1 (10.3.6) at localhost [domain1]"/>
+  <module moduleId="org.eclipse.jst.jee.server:ch10_ex1_email" serverId="Oracle WebLogic Server 11gR1 (10.3.6) at localhost [domain1]"/>
+  <module moduleId="org.eclipse.jst.jee.server:ch10_ex2_cart" serverId="Oracle WebLogic Server 11gR1 (10.3.6) at localhost [domain1]"/>
+  <module moduleId="org.eclipse.jst.jee.server:QA_Pro" serverId="Tomcat v8.0 Server at localhost"/>
 </modules>

@@ -312,8 +312,7 @@
   <!--                                                                      -->
   <!--   cgiPathPrefix        The CGI search path will start at             -->
   <!--                        webAppRootDir + File.separator + this prefix. -->
-  <!--                        If not set, then webAppRootDir is used.       -->
-  <!--                        Recommended value: WEB-INF/cgi                -->
+  <!--                        [WEB-INF/cgi]                                 -->
   <!--                                                                      -->
   <!--   debug                Debugging detail level for messages logged    -->
   <!--                        by this servlet.  [0]                         -->

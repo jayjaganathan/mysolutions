@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workingSetManager>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1428115433260_1" label="Murach" name="Murach">
+<item elementID="=ch08_ex1_email" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=ch09_ex2_cart" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=ch09_ex1_download" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1426121194635_0" label="Window Working Set" name="Aggregate for window 1426121194635"/>
+<mruList name="Murach"/>
 </workingSetManager>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ejb-jar xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/ejb-jar_3_0.xsd"
+	version="3.0">
+	<display-name>wrs-ejbs</display-name>
+	<enterprise-beans>
+		<session>
+			<ejb-name>File</ejb-name>
+			<business-local>fileManagement.FileLocal</business-local>
+			<ejb-class>fileManagement.File</ejb-class>
+			<session-type>Stateless</session-type>
+		</session>
+		<session> <ejb-name>UserBean</ejb-name> <ejb-local-ref>
+			<ejb-ref-name>ejb/CartBean</ejb-ref-name>
+			<ejb-ref-type>Session</ejb-ref-type>
+			<mapped-name>CartBean</mapped-name>
+			<local-home>cart.ejb.CartHome</local-home>
+			<local>cart.ejb.Cart</local>
+			<ejb-link>CartBean</ejb-link>
+		</ejb-local-ref>
+		
+		</session>
+
+		
+
+
+	</enterprise-beans>
+
+	<ejb-client-jar>wrs-ejbsClient.jar</ejb-client-jar>
+</ejb-jar>

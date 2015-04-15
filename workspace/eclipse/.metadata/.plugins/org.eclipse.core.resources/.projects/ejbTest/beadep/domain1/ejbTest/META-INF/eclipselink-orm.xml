@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings version="2.3" xmlns="http://www.eclipse.org/eclipselink/xsds/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.eclipse.org/eclipselink/xsds/persistence/orm http://www.eclipse.org/eclipselink/xsds/eclipselink_orm_2_3.xsd">
+    <named-query name="User.findAll">
+        <query>select u from User u</query>
+    </named-query>
+	<entity class="model.User" access="VIRTUAL">
+		<table name="USER1"/>
+		<attributes>
+			<id name="userid" attribute-type="long">
+				<generated-value strategy="AUTO"/>
+			</id>
+			<basic name="email" attribute-type="String">
+			</basic>
+			<basic name="firstname" attribute-type="String">
+			</basic>
+			<basic name="lastname" attribute-type="String">
+			</basic>
+		</attributes>
+	</entity>
+</entity-mappings>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="wrs-ejbs">
+        <wb-resource deploy-path="/" source-path="/ejbModule" tag="defaultRootSource"/>
+        <dependent-module archiveName="wrs-ejbsClient.jar" deploy-path="/" handle="module:/resource/wrs-ejbsClient/wrs-ejbsClient">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="java-output-path" value="/wrs-ejbs/build/classes"/>
+        <property name="ClientProject" value="wrs-ejbsClient"/>
+        <property name="ClientJARURI" value="wrs-ejbsClient.jar"/>
+    </wb-module>
+</project-modules>

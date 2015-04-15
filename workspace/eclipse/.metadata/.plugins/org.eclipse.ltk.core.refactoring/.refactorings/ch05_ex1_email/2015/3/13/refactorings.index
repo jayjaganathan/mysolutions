@@ -1,0 +1,12 @@
+1427111383239	Rename resource 'persistence.xml'
+1427144510701	Rename resource 'persistence01.xml'
+1427160394858	Delete element
+1427161807711	Delete element
+1427197244047	Delete element
+1427234270567	Delete element
+1427253241261	Extract interface 'IUserDB'
+1427253743006	Delete elements
+1427284006416	Delete element
+1427299529046	Move package
+1427299564413	Move compilation unit
+1427338382115	Delete element

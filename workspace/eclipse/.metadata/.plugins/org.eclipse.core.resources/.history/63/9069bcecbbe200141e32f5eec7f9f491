@@ -1,0 +1,8 @@
+package ejbs;
+
+import javax.ejb.Local;
+
+@Local({UserBeanLocal.class})
+public interface UserBeanLocal {
+	public String getName();
+}

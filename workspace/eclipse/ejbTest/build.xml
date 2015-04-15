@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. --><project basedir="." default="build" name="ejbTest">
+    <property environment="env"/>
+    <property name="ch05_ex1_email.location" value="../murach/ex_starts"/>
+    <property name="ch06_ex1_email.location" value="../ch06_ex1_email"/>
+    <property name="ECLIPSE_HOME" value="../../../../../../Tools/Oracle Eclipse/"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.7"/>
+    <property name="source" value="1.7"/>
+    <path id="WebLogic System Libraries.libraryclasspath">
+        <pathelement location="../../../../../../Tools/wls1036_dev/modules/javax.persistence_1.1.0.0_2-0.jar"/>
+        <pathelement location="../../../../../../Tools/wls1036_dev/modules/com.oracle.jpa2support_1.0.0.0_2-1.jar"/>
+        <pathelement location="../../../../../../Tools/wls1036_dev/wlserver/server/lib/api.jar"/>
+        <pathelement location="../../../../../../Tools/wls1036_dev/modules/glassfish.jstl_1.2.0.1.jar"/>
+        <pathelement location="../../../../../../Tools/wls1036_dev/modules/javax.jsf_1.1.0.0_1-2.jar"/>
+        <pathelement location="../../../../../../Tools/wls1036_dev/modules/javax.ejb_3.0.1.jar"/>
+        <pathelement location="../../../../../../Tools/wls1036_dev/modules/javax.enterprise.deploy_1.2.jar"/>
+        <pathelement location="../../../../../../Tools/wls1036_dev/modules/javax.interceptor_1.0.jar"/>
+        <pathelement location="../../../../../../Tools/wls1036_dev/modules/javax.jms_1.1.1.jar"/>
+        <pathelement location="../../../../../../Tools/wls1036_dev/modules/javax.jsp_1.3.0.0_2-1.jar"/>
+        <pathelement location="../../../../../../Tools/wls1036_dev/modules/javax.jws_2.0.jar"/>
+        <pathelement location="../../../../../../Tools/wls1036_dev/modules/javax.activation_1.1.0.0_1-1.jar"/>
+        <pathelement location="../../../../../../Tools/wls1036_dev/modules/javax.mail_1.1.0.0_1-4-1.jar"/>
+        <pathelement location="../../../../../../Tools/wls1036_dev/modules/javax.xml.soap_1.3.1.0.jar"/>
+        <pathelement location="../../../../../../Tools/wls1036_dev/modules/javax.xml.rpc_1.2.1.jar"/>
+        <pathelement location="../../../../../../Tools/wls1036_dev/modules/javax.xml.ws_2.1.1.jar"/>
+        <pathelement location="../../../../../../Tools/wls1036_dev/modules/javax.management.j2ee_1.0.jar"/>
+        <pathelement location="../../../../../../Tools/wls1036_dev/modules/javax.resource_1.5.1.jar"/>
+        <pathelement location="../../../../../../Tools/wls1036_dev/modules/javax.servlet_1.0.0.0_2-5.jar"/>
+        <pathelement location="../../../../../../Tools/wls1036_dev/modules/javax.transaction_1.0.0.0_1-1.jar"/>
+        <pathelement location="../../../../../../Tools/wls1036_dev/modules/javax.xml.stream_1.1.1.0.jar"/>
+        <pathelement location="../../../../../../Tools/wls1036_dev/modules/javax.security.jacc_1.0.0.0_1-1.jar"/>
+        <pathelement location="../../../../../../Tools/wls1036_dev/modules/javax.xml.registry_1.0.0.0_1-0.jar"/>
+        <pathelement location="../../../../../../Tools/wls1036_dev/wlserver/server/lib/wls-api.jar"/>
+        <pathelement location="../../../../../../Tools/wls1036_dev/modules/com.bea.core.apache_1.3.0.1.jar"/>
+        <pathelement location="../../../../../../Tools/wls1036_dev/modules/com.bea.core.i18n_1.9.0.0.jar"/>
+        <pathelement location="../../../../../../Tools/wls1036_dev/modules/com.bea.core.logging_1.9.0.0.jar"/>
+        <pathelement location="../../../../../../Tools/wls1036_dev/modules/com.bea.core.utils.full_1.10.0.0.jar"/>
+        <pathelement location="../../../../../../Tools/wls1036_dev/modules/com.bea.core.utils.wrapper_1.4.0.0.jar"/>
+        <pathelement location="../../../../../../Tools/wls1036_dev/modules/com.bea.core.utils.classloaders_2.0.0.0.jar"/>
+        <pathelement location="../../../../../../Tools/wls1036_dev/modules/com.bea.core.common.security.providers.env_1.0.0.0_6-2-0-0.jar"/>
+        <pathelement location="../../../../../../Tools/wls1036_dev/modules/com.bea.core.common.security.saml2.manage_1.0.0.0_6-2-0-0.jar"/>
+        <pathelement location="../../../../../../Tools/wls1036_dev/modules/com.bea.core.weblogic.web.api_1.4.0.0.jar"/>
+        <pathelement location="../../../../../../Tools/wls1036_dev/modules/com.bea.core.weblogic.rmi.client_1.11.0.0.jar"/>
+        <pathelement location="../../../../../../Tools/wls1036_dev/modules/com.bea.core.transaction_2.7.1.0.jar"/>
+        <pathelement location="../../../../../../Tools/wls1036_dev/modules/com.bea.core.workarea_1.8.0.0.jar"/>
+        <pathelement location="../../../../../../Tools/wls1036_dev/modules/com.bea.core.xml.weblogic.xpath_1.5.0.0.jar"/>
+        <pathelement location="../../../../../../Tools/wls1036_dev/modules/com.bea.core.datasource6_1.10.0.0.jar"/>
+        <pathelement location="../../../../../../Tools/wls1036_dev/modules/com.bea.core.weblogic.stax_1.10.0.0.jar"/>
+        <pathelement location="../../../../../../Tools/wls1036_dev/modules/javax.persistence_1.0.0.0_1-0-2.jar"/>
+        <pathelement location="../../../../../../Tools/wls1036_dev/modules/org.eclipse.persistence_1.2.0.0_2-3.jar"/>
+    </path>
+    <path id="EAR Libraries.libraryclasspath"/>
+    <path id="Enterprise Application Libraries [earMurach].libraryclasspath">
+        <pathelement location="../../../../../../earMurach/EarContent/APP-INF/classes"/>
+    </path>
+    <path id="EclipseLink 1.1.2.userclasspath">
+        <pathelement location="../../../../../../Tools/eclipselink/eclipselinks/com.sun.tools.xjc_2.2.0.jar"/>
+        <pathelement location="../../../../../../Tools/eclipselink/eclipselinks/com.sun.xml.bind_2.2.0.v201004141950.jar"/>
+        <pathelement location="../../../../../../Tools/eclipselink/eclipselinks/commonj.sdo_2.1.1.v200905221342.jar"/>
+        <pathelement location="../../../../../../Tools/eclipselink/eclipselinks/connector.jar"/>
+        <pathelement location="../../../../../../Tools/eclipselink/eclipselinks/eclipselink.jar"/>
+        <pathelement location="../../../../../../Tools/eclipselink/eclipselinks/eclipselink-dbwsutils.jar"/>
+        <pathelement location="../../../../../../Tools/eclipselink/eclipselinks/eclipselink-jpa-modelgen_2.3.1.v20111018-r10243.jar"/>
+        <pathelement location="../../../../../../Tools/eclipselink/eclipselinks/eclipselinkmw.jar"/>
+        <pathelement location="../../../../../../Tools/eclipselink/eclipselinks/elmwcore.jar"/>
+        <pathelement location="../../../../../../Tools/eclipselink/eclipselinks/javax.activation_1.1.0.v201005080500.jar"/>
+        <pathelement location="../../../../../../Tools/eclipselink/eclipselinks/javax.mail_1.4.0.v201005080615.jar"/>
+        <pathelement location="../../../../../../Tools/eclipselink/eclipselinks/javax.persistence_1.0.0.jar"/>
+        <pathelement location="../../../../../../Tools/eclipselink/eclipselinks/javax.persistence_2.0.3.v201010191057.jar"/>
+        <pathelement location="../../../../../../Tools/eclipselink/eclipselinks/javax.servlet_2.4.0.v200806031604.jar"/>
+        <pathelement location="../../../../../../Tools/eclipselink/eclipselinks/javax.wsdl_1.6.2.v200806030405.jar"/>
+        <pathelement location="../../../../../../Tools/eclipselink/eclipselinks/javax.xml.bind_2.2.0.v201005080402.jar"/>
+        <pathelement location="../../../../../../Tools/eclipselink/eclipselinks/javax.xml.stream_1.0.1.v201004272200.jar"/>
+        <pathelement location="../../../../../../Tools/eclipselink/eclipselinks/package-rename.jar"/>
+        <pathelement location="../../../../../../Tools/eclipselink/eclipselinks/xercesImpl.jar"/>
+    </path>
+    <path id="ejbTest.classpath">
+        <pathelement location="build/classes"/>
+        <path refid="WebLogic System Libraries.libraryclasspath"/>
+        <path refid="EAR Libraries.libraryclasspath"/>
+        <path refid="Enterprise Application Libraries [earMurach].libraryclasspath"/>
+        <path refid="EclipseLink 1.1.2.userclasspath"/>
+    </path>
+    <target name="init">
+        <mkdir dir="build/classes"/>
+        <copy includeemptydirs="false" todir="build/classes">
+            <fileset dir="ejbModule">
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="build/classes"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="build/classes" includeantruntime="false" source="${source}" target="${target}">
+            <src path="ejbModule"/>
+            <classpath refid="ejbTest.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects">
+        <ant antfile="build.xml" dir="${ch05_ex1_email.location}" inheritAll="false" target="clean"/>
+        <ant antfile="build.xml" dir="${ch05_ex1_email.location}" inheritAll="false" target="build">
+            <propertyset>
+                <propertyref name="build.compiler"/>
+            </propertyset>
+        </ant>
+        <ant antfile="build.xml" dir="${ch06_ex1_email.location}" inheritAll="false" target="clean"/>
+        <ant antfile="build.xml" dir="${ch06_ex1_email.location}" inheritAll="false" target="build">
+            <propertyset>
+                <propertyref name="build.compiler"/>
+            </propertyset>
+        </ant>
+    </target>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+</project>

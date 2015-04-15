@@ -1,0 +1,22 @@
+package beans;
+
+import javax.ejb.Stateless;
+
+/**
+ * Session Bean implementation class HelloWorldBean
+ */
+@Stateless(name="HelloWorld", mappedName = "remote_ejb-HelloWorld")
+public class HelloWorldBean implements HelloWorldBeanRemote, HelloWorldBeanLocal {
+
+    /**
+     * Default constructor. 
+     */
+    public HelloWorldBean() {
+     
+    }
+    
+    public String GetLocalName() { return "Local Hello World!"; }   
+    
+    public String GetRemoteName() { return "Remote Hello World!"; }   
+
+}

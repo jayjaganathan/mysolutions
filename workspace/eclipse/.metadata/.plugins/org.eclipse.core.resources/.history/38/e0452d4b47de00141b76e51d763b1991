@@ -1,0 +1,116 @@
+package userServlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Hashtable;
+
+import javax.ejb.EJB;
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+import javax.servlet.ServletException; 
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import weblogic.servlet.annotation.WLServlet;
+import ejbs.UserBeanLocal;
+import ejbs.UserBeanRemote;
+import fileManagement.FileLocal;
+
+
+
+/**
+ * Servlet implementation class HelloWorldServlet
+ */
+@WLServlet(mapping="/UserServlet")
+public class UserServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	 
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public UserServlet() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+    @EJB(name = "ejb/UserBean")
+    UserBeanLocal hw; 
+    
+    // @EJB(name = "ejb/FileBean")
+    FileLocal fl; 
+    
+	/**java:global.WRS.HelloWorldEJB.HelloWorldBean
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		try {
+			Hashtable<String, String> h = new Hashtable<String, String>(7);
+			h.put(Context.INITIAL_CONTEXT_FACTORY, "weblogic.jndi.WLInitialContextFactory");
+			h.put(Context.PROVIDER_URL, "t3://127.0.0.1:7001");
+			InitialContext context = new InitialContext(h);
+			// UserBeanRemote hw =  (UserBeanRemote) context.lookup("java:global.WRS.HelloWorldEJB.HelloWorldBean");
+			// Object bean = context.lookup("java:global/WRS/HelloWorldEJB/HelloWorldBean");
+			hw =  (UserBeanLocal)context.lookup("java:comp/env/ejb/UserBean");
+			fl =  (FileLocal)context.lookup("wrs-earwrs-ejbs_jarFile_Home");
+			
+			/* Object bean = context.lookup("java:global/wrs-ejbs/UserBean");
+			
+			if(bean == null) 
+				System.out.println("bean is null");
+			else
+				System.out.println(bean.toString());*/
+			System.out.println("debugger");
+			
+		      // Set response content type
+		      response.setContentType("text/html");
+
+		      // Actual logic goes here.
+		      PrintWriter out = response.getWriter();
+		      out.println("<h1>" + hw.getName()  + "</h1>");
+		      
+		      out.println("<h1>" + fl.getName() + "</h1>");
+			
+			
+		} catch (NamingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		try {
+			Hashtable<String, String> h = new Hashtable<String, String>(7);
+			h.put(Context.INITIAL_CONTEXT_FACTORY, "weblogic.jndi.WLInitialContextFactory");
+			h.put(Context.PROVIDER_URL, "t3://127.0.0.1:7001");
+
+			InitialContext context = new InitialContext(h);
+			UserBeanRemote hw =  (UserBeanRemote) context.lookup("java:global.WRS.HelloWorldEJB.HelloWorldBean");
+			
+			Object bean = context.lookup("java:global/WRS/HelloWorldEJB/HelloWorldBean");
+			if(bean == null) 
+				System.out.println("bean is null");
+			else
+				System.out.println(bean.toString());
+			System.out.println("debugger");
+			
+		      // Set response content type
+		      response.setContentType("text/html");
+
+		      // Actual logic goes here.
+		      PrintWriter out = response.getWriter();
+		      out.println("<h1>" + hw.getName()  + "</h1>");
+		      
+		      out.println("<h1>" + request.getParameter("a")  + "</h1>");
+			
+			
+		} catch (NamingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+}

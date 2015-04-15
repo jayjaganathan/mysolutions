@@ -1,0 +1,50 @@
+package murach.cart;
+
+import java.io.*;
+
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+import javax.servlet.*;
+import javax.servlet.http.*;
+
+import java.util.ArrayList;
+import java.util.Hashtable;
+
+import murach.data.*;
+import murach.business.*;
+
+public class ProductsServlet extends HttpServlet {
+
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 2726258998547343410L;
+
+	@Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
+        HttpSession session = request.getSession();
+        String path = getServletContext().getRealPath("/WEB-INF/products.txt");
+        ArrayList<Product> products = ProductIO.getProducts(path);
+        session.setAttribute("products", products);
+        
+        Hashtable<String, String> h = new Hashtable<String, String>(7);
+		h.put(Context.INITIAL_CONTEXT_FACTORY, "weblogic.jndi.WLInitialContextFactory");
+		h.put(Context.PROVIDER_URL, "t3://127.0.0.1:7001");
+		try {
+			InitialContext context = new InitialContext(h);
+		} catch (NamingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+
+        String url = "/index.jsp";
+        getServletContext()
+                .getRequestDispatcher(url)
+                .forward(request, response);
+    }
+}

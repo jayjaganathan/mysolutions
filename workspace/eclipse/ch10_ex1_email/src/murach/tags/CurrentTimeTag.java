@@ -1,0 +1,37 @@
+package murach.tags;
+
+import java.io.IOException;
+import java.text.DateFormat;
+import java.util.Date;
+
+import javax.servlet.jsp.JspException;
+import javax.servlet.jsp.JspWriter;
+import javax.servlet.jsp.tagext.TagSupport;
+
+public class CurrentTimeTag extends TagSupport {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 5567328347883516724L;
+
+	/* (non-Javadoc)
+	 * @see javax.servlet.jsp.tagext.TagSupport#doStartTag()
+	 */
+	@Override
+	public int doStartTag() throws JspException {
+		
+		Date currentDate = new Date();
+		DateFormat shortDate = DateFormat.getTimeInstance(DateFormat.LONG);
+		String currentDateFormatted = shortDate.format(currentDate);
+		
+		try {
+            JspWriter out = pageContext.getOut();
+            out.print(currentDateFormatted);
+        } catch (IOException ioe) {
+            System.out.println(ioe);
+        }
+        return SKIP_BODY;
+	}
+
+}

@@ -1,0 +1,37 @@
+package fileManagement;
+
+import java.io.Serializable;
+
+import javax.ejb.Stateless;
+
+/**
+ * Session Bean implementation class File
+ */
+@Stateless(name = "FileBean", mappedName = "FileBean")
+public class File implements FileRemote, FileLocal, Serializable {
+
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 4920112432538754170L;
+
+	/**
+     * Default constructor. 
+     */
+    public File() {
+        // TODO Auto-generated constructor stub
+    }
+
+	@Override
+	public String getFileName() {
+		// TODO Auto-generated method stub
+		return "This file name";
+	}
+
+	@Override
+	public String getName() {
+		// TODO Auto-generated method stub
+		return "This file name";
+	}
+
+}

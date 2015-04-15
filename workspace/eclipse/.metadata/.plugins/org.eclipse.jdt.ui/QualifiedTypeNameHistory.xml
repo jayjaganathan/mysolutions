@@ -1,2 +1,38 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
+<fullyQualifiedTypeName name="murach.business.User"/>
+<fullyQualifiedTypeName name="javax.persistence.SqlResultSetMapping"/>
+<fullyQualifiedTypeName name="javax.persistence.Table"/>
+<fullyQualifiedTypeName name="javax.persistence.Entity"/>
+<fullyQualifiedTypeName name="javax.ejb.Stateless"/>
+<fullyQualifiedTypeName name="com.jj.beans.DBUtil"/>
+<fullyQualifiedTypeName name="javax.ejb.Local"/>
+<fullyQualifiedTypeName name="javax.ejb.Remote"/>
+<fullyQualifiedTypeName name="com.jj.beans.UserBean"/>
+<fullyQualifiedTypeName name="com.jj.beans.UserBeanLocal"/>
+<fullyQualifiedTypeName name="javax.persistence.PersistenceUnit"/>
+<fullyQualifiedTypeName name="javax.persistence.EntityManagerFactory"/>
+<fullyQualifiedTypeName name="javax.persistence.PersistenceContext"/>
+<fullyQualifiedTypeName name="model.User1"/>
+<fullyQualifiedTypeName name="murach.business.User2"/>
+<fullyQualifiedTypeName name="murach.business.User1"/>
+<fullyQualifiedTypeName name="java.io.PrintWriter"/>
+<fullyQualifiedTypeName name="java.util.Calendar"/>
+<fullyQualifiedTypeName name="murach.data.ProductIO"/>
+<fullyQualifiedTypeName name="ejbs.UserBeanRemote"/>
+<fullyQualifiedTypeName name="java.io.Serializable"/>
+<fullyQualifiedTypeName name="javax.servlet.jsp.tagext.TagSupport"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="javax.servlet.jsp.tagext.BodyTagSupport"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="murach.business.Product"/>
+<fullyQualifiedTypeName name="javax.servlet.jsp.PageContext"/>
+<fullyQualifiedTypeName name="fileManagement.FileRemote"/>
+<fullyQualifiedTypeName name="javax.ejb.EJB"/>
+<fullyQualifiedTypeName name="ejbs.UserBeanLocal"/>
+<fullyQualifiedTypeName name="javax.naming.Context"/>
+<fullyQualifiedTypeName name="java.util.Hashtable"/>
+<fullyQualifiedTypeName name="javax.naming.InitialContext"/>
+<fullyQualifiedTypeName name="fileManagement.FileLocal"/>
+</qualifiedTypeNameHistroy>

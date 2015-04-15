@@ -1,0 +1,64 @@
+package ejbs;
+
+import java.io.Serializable;
+import java.util.Hashtable;
+
+import javax.ejb.EJB;
+import javax.ejb.Stateless;
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+
+import cart.ejb.Cart;
+ 
+/**
+ * Session Bean implementation class UserBean
+ */
+
+@EJB(name="UserBean", beanInterface=UserBeanLocal.class)
+@Stateless(mappedName="UserBean")
+public class UserBean implements UserBeanLocal, UserBeanRemote, Serializable  {
+
+	@EJB(mappedName = "CartBean")
+ private static Cart cart;
+	 
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 3328027725129351515L;
+
+	/**
+     * Default constructor. 
+     */
+    public UserBean() {
+        // TODO Auto-generated constructor stub
+    }
+
+	@Override
+	public String getName()   {
+		  return "Hello World!";
+		 
+		/*
+		  Hashtable<String, String> h = new Hashtable<String, String>(7);
+		 
+    	h.put(Context.INITIAL_CONTEXT_FACTORY, "weblogic.jndi.WLInitialContextFactory");
+        h.put(Context.PROVIDER_URL, "t3://127.0.0.1:7001");
+        InitialContext context = null;
+		try {
+			context = new InitialContext(h);
+		} catch (NamingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        try {
+			cart = (Cart) context.lookup("CartBean#cart.ejb.Cart");
+		} catch (NamingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        
+		return cart.toString() + "Hello World!";*/
+		 
+	}
+
+}

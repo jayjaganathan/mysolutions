@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ejb-jar xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/ejb-jar_3_0.xsd"
+	version="3.0">
+	<display-name>wrs-ejbs</display-name>
+	
+	<enterprise-beans>
+		<session>
+			<ejb-name>File</ejb-name>
+			<ejb-class>fileManagement.File</ejb-class> 
+			<ejb-local-ref>
+				<ejb-ref-name>fileManagement/FileBean</ejb-ref-name>
+				<ejb-ref-type>Session</ejb-ref-type>
+				<local>fileManagement.FileLocal</local>
+				<ejb-link>File</ejb-link>
+			</ejb-local-ref>
+		</session>
+	</enterprise-beans>
+
+	<ejb-client-jar>wrs-ejbsClient.jar</ejb-client-jar>
+
+</ejb-jar>

@@ -1,0 +1,38 @@
+package ejbs;
+
+import java.io.Serializable;
+
+import javax.ejb.EJB;
+import javax.ejb.Stateless;
+
+import cart.ejb.Cart;
+ 
+/**
+ * Session Bean implementation class UserBean
+ */
+
+@EJB(name="UserBean", beanInterface=UserBeanLocal.class)
+@Stateless(mappedName="UserBean")
+public class UserBean implements UserBeanLocal, UserBeanRemote, Serializable  {
+
+	private static Cart cart;
+	
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 3328027725129351515L;
+
+	/**
+     * Default constructor. 
+     */
+    public UserBean() {
+        // TODO Auto-generated constructor stub
+    }
+
+	@Override
+	public String getName() {
+		// TODO Auto-generated method stub
+		return "Hello World!";
+	}
+
+}

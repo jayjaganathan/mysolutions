@@ -1,0 +1,79 @@
+package murach.tags;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Iterator;
+ 
+
+import javax.servlet.jsp.JspException;
+import javax.servlet.jsp.JspWriter;
+import javax.servlet.jsp.tagext.BodyTagSupport;
+
+ 
+import murach.business.Product;
+
+public class ProductTag extends BodyTagSupport {
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -5361429711293929439L;
+	ArrayList<Product> products;
+	Iterator<Product> iterator;
+
+	/* (non-Javadoc)
+	 * @see javax.servlet.jsp.tagext.BodyTagSupport#doAfterBody()
+	 */
+	@Override
+	public int doAfterBody() throws JspException {
+        try {
+            if (iterator.hasNext()) {
+                Product product = (Product) iterator.next();
+    	        pageContext.setAttribute(
+    	                "productDescription", product.getDescription());
+                return EVAL_BODY_AGAIN;
+            } else {
+                JspWriter out = bodyContent.getEnclosingWriter();
+                bodyContent.writeOut(out);
+                return SKIP_BODY;
+            }
+        } catch (IOException ioe) {
+            System.err.println("error in doAfterBody " + ioe.getMessage());
+            return SKIP_BODY;
+        }
+	}
+
+	/* (non-Javadoc)
+	 * @see javax.servlet.jsp.tagext.BodyTagSupport#doInitBody()
+	 */
+	@Override
+	public void doInitBody() throws JspException {
+		
+		iterator = products.iterator();
+		if(iterator.hasNext())
+		{
+			Product product = (Product)iterator.next();
+			
+	        pageContext.setAttribute(
+	                "productDescription", product.getDescription());
+		}
+		
+	}
+
+	/* (non-Javadoc)
+	 * @see javax.servlet.jsp.tagext.BodyTagSupport#doStartTag()
+	 */
+	@Override
+	public int doStartTag() throws JspException {
+		
+		products = (ArrayList<Product>) pageContext.getAttribute("products", PageContext.SESSION_SCOPE );
+		
+		if(products.size() <= 0) {
+            return SKIP_BODY;
+        } else {
+            return EVAL_BODY_BUFFERED;
+        }
+	}
+
+	
+}

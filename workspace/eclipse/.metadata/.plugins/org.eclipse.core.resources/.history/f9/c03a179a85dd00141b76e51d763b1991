@@ -1,0 +1,27 @@
+package ejbs;
+
+import javax.ejb.EJB;
+import javax.ejb.Stateless;
+ 
+/**
+ * Session Bean implementation class UserBean
+ */
+
+@EJB(beaninterface="UserBeanLocal")
+@Stateless(mappedName="UserBean")
+public class UserBean implements UserBeanRemote, UserBeanLocal {
+
+    /**
+     * Default constructor. 
+     */
+    public UserBean() {
+        // TODO Auto-generated constructor stub
+    }
+
+	@Override
+	public String getName() {
+		// TODO Auto-generated method stub
+		return "Hell World";
+	}
+
+}

@@ -1,0 +1,18 @@
+package fileManagement;
+
+import javax.ejb.Stateless;
+
+/**
+ * Session Bean implementation class File
+ */
+@Stateless(name = "FileBean", mappedName = "FileBean")
+public class File implements FileRemote, FileLocal {
+
+    /**
+     * Default constructor. 
+     */
+    public File() {
+        // TODO Auto-generated constructor stub
+    }
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move package &apos;cart.client&apos; to &apos;cart-app-client/appClientModule/cart.client&apos;&#x0D;&#x0A;- Original project: &apos;cart-app-client&apos;&#x0D;&#x0A;- Destination element: &apos;cart-app-client/appClientModule/cart.client&apos;&#x0D;&#x0A;- Original element: &apos;cart-app-client/ImportedClasses/cart.client&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move package" destination="/appClientModule&lt;cart.client" element1="/ImportedClasses&lt;cart.client" flags="589830" fragments="1" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.movePackages" stamp="1427837487388" version="1.0"/>
+</session>

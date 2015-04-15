@@ -1,0 +1,8 @@
+package fileManagement;
+
+import javax.ejb.Remote;
+
+@Remote
+public interface FileRemote {
+
+}

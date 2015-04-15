@@ -1,0 +1,43 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+    
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<%
+	request.setAttribute("message", "Hello World!123");
+	String message = "Hello World from inside";
+ %>
+
+<%! String mesg = "Hell WOkrd!2"; %>
+
+<jsp:useBean id="user1" class="myclasses.User" />
+
+<jsp:setProperty name='user1' property="Name" value="Hello World from UseBean" />
+
+<jsp:getProperty name='user1' property="Name"  />
+
+<%
+	myclasses.User user2 = new myclasses.User();
+	user2.setName("Jay");
+	request.setAttribute("user2", user2);
+ %>
+ 
+${user2.Name}
+
+<c:if test="${message != null}">
+<p><i>${message}</i>
+</p>
+
+${mesg}
+</c:if>
+	${  "Hello World!" }
+</body>
+</html>
